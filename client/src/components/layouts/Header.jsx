@@ -136,7 +136,7 @@ export default function Header(props) {
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={3} color="secondary">
+              <Badge badgeContent={7} color="secondary">
                 <Icon path={mdiCartOutline}
                     title="Cart Count"
                     size={1}

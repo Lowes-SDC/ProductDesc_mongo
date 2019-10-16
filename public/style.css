@@ -34,3 +34,8 @@
   #main {
     width: 130%;
   }
+
+  #description {
+    width: 45%;
+    max-width: 1200px;
+  }
