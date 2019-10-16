@@ -1,0 +1,36 @@
+.wrap {
+    margin-top: -1.2%;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 86.8%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
+  .left {
+    height: 0px;
+    width: 0%;
+    padding: 0%;
+
+    margin-right: -15%;
+  }
+  
+  .right {
+    height: 0px;
+    width: 0%;
+    padding: 0%;
+    margin-left: 25%;
+  }
+
+  #main {
+    width: 130%;
+  }
