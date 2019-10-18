@@ -36,13 +36,20 @@ export default class App extends React.Component {
             url: '/todo',
         })
         .then(results => {
+            let discount = Math.floor(Math.random() * (51 - 3) ) + 3;
             this.setState({
                 stock: results.data,
                 default: results.data[25],
-                itemDescs: results.data[25].Descriptions.split(', ')
+                itemDescs: results.data[25].Descriptions.split(', '),
+                price: results.data[25].Prices,
+                fakePrice: Math.round(100*((results.data[25].Prices/(100-discount)) * 100))/100,
+                discount: discount
             });
             //console.log(this.state.stock);
             //console.log(this.state.itemDescs);
+            console.log(results.data[25]);
+            console.log(this.state.price);
+            console.log(this.state.fakePrice);
         });
         
     }
@@ -65,9 +72,9 @@ export default class App extends React.Component {
             <Paper className="description">
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item xs zeroMinWidth>
-                  <p noWrap className="price"><sup className="first-letter">$</sup>{this.state.default.Prices}
-                  <span className="prevPrice">Was 111.11</span></p>
-                  <p className="save">Save 17%</p>
+                  <p className="price"><sup className="first-letter">$</sup>{this.state.price}
+                  <span className="prevPrice">Was {this.state.fakePrice}</span></p>
+                  <p className="save">Save {this.state.discount}%</p>
                 </Grid>
               </Grid>
             </Paper>
