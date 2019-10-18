@@ -38,11 +38,11 @@ export default class App extends React.Component {
         .then(results => {
             this.setState({
                 stock: results.data,
-                default: results.data[100],
-                itemDescs: results.data[100].Descriptions.split(', ')
+                default: results.data[25],
+                itemDescs: results.data[25].Descriptions.split(', ')
             });
             //console.log(this.state.stock);
-            console.log(this.state.itemDescs);
+            //console.log(this.state.itemDescs);
         });
         
     }
@@ -65,20 +65,24 @@ export default class App extends React.Component {
             <Paper className="description">
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item xs zeroMinWidth>
-                  <Typography noWrap>{this.state.default.Prices}</Typography>
+                  <p noWrap className="price"><sup className="first-letter">$</sup>{this.state.default.Prices}
+                  <span className="prevPrice">Was 111.11</span></p>
+                  <p className="save">Save 17%</p>
                 </Grid>
               </Grid>
             </Paper>
             <Paper className="">
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item xs zeroMinWidth>
-                  <ul>
+                  <ul className="bullets">
                     {this.state.itemDescs.map(value => (
-                    <li key={value}>{value}</li>))}
+                    <li key={value} className="bulletpoint">{value}</li>))}
                   </ul>
-                  
+                  <hr className=""></hr>
                 </Grid>
+                
               </Grid>
+              
             </Paper>
             <Paper className="">
               <Grid container wrap="nowrap" spacing={2}>
