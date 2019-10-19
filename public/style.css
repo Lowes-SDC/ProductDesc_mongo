@@ -135,7 +135,14 @@ html, body {
   }
 
   .cartForm {
-    margin-left: 4%;
+    margin-left: 4.5%;
+    max-height: 54px;
+  }
+
+  .quantity {
+    height: 50px;
+    min-height: 50px;;
+    width: 54px;
   }
 
 
@@ -212,13 +219,21 @@ html, body {
 
   .addToCart {
     color: #FFF;
-    background-color: #3da100!important;
+    background-color: #3da100;
     border-width: 0 2px;
     padding: 0 20px;
     height: 54px;
+    width:210.69px;
     min-height: 54px;
     max-height: 54px;
-    padding-top: 10px;
+    vertical-align: top;
+    margin-right: 4%;
+    margin-left: 1.8em;
+    border: .8px solid #3da100;
+  }
+
+  .addToCart:hover {
+    background-color: #3e8e41;
   }
 
   #addTxt {

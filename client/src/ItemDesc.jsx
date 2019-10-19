@@ -50,10 +50,10 @@ export default class App extends React.Component {
             this.setState({
                 stock: results.data,
                 //default: results.data[100],
-                itemDescs: results.data[13].Descriptions.split(', '),
-                price: results.data[13].Prices.toFixed(2),
-                fakePrice: results.data[13].Mockprice.toFixed(2),
-                discount: results.data[13].Discount
+                itemDescs: results.data[83].Descriptions.split(', '),
+                price: results.data[83].Prices.toFixed(2),
+                fakePrice: results.data[83].Mockprice.toFixed(2),
+                discount: results.data[83].Discount
             });
         });
         
