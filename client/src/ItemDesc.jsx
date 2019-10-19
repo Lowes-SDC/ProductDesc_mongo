@@ -50,10 +50,10 @@ export default class App extends React.Component {
             this.setState({
                 stock: results.data,
                 //default: results.data[100],
-                itemDescs: results.data[12].Descriptions.split(', '),
-                price: results.data[12].Prices.toFixed(2),
-                fakePrice: results.data[12].Mockprice.toFixed(2),
-                discount: results.data[12].Discount
+                itemDescs: results.data[13].Descriptions.split(', '),
+                price: results.data[13].Prices.toFixed(2),
+                fakePrice: results.data[13].Mockprice.toFixed(2),
+                discount: results.data[13].Discount
             });
         });
         
@@ -116,6 +116,25 @@ export default class App extends React.Component {
                     <li key={value} className="bulletpoint">{value}</li>))}
                   </ul>
                   <hr></hr>
+
+                  <div className="number-input cartForm">
+                    <button onClick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                    <input className="quantity" min="1" name="quantity" value="1" type="number"></input>
+                    <button onClick="this.parentNode.querySelector('input[type=number]').stepUp()" className="plus"></button>
+                  </div>
+
+                  <button className="addToCart">
+                          <span id="addTxt">ADD TO CART</span>
+                      </button>
+
+
+
+
+
+
+
+
+
                       <div className="btngrp">
                       <button className="saveButton" onClick={this.changeHeart}>
                           <Icon path={this.state.iconHeart}
