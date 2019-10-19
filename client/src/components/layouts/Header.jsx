@@ -154,31 +154,13 @@ export default function Header(props) {
       <AppBar position="static" className="header" color='inherit'>
         <Toolbar>
             <StepLabel icon={ <img src="https://fec-hallowes.s3.amazonaws.com/Hallowes.png" alt="" width="75" height="65" /> } />
-            <div>
-              <span><button className="headerCat" title="Shop">Shop</button></span>
-              <span><button className="headerCat" title="Ideas">Ideas</button></span>
-              <span><button className="headerCat" title="Savings">Savings</button></span>
+            <React.Fragment>
+              <button className="headerCat" title="Shop">Shop</button>
+              <button className="headerCat" title="Ideas">Ideas</button>
+              <button className="headerCat" title="Savings">Savings</button>
+            </React.Fragment>
               
-              
-              
-              
-              
-            </div>
-            
-          {/* <div className={classes.search}>
-            <IconButton className={classes.searchIcon} aria-label="search">
-                <SearchIcon />
-            </IconButton>
-            <InputBase
-              placeholder="What are you looking for today?"
-              fullWidth
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div> */}
+
           <Paper className={classes.search}>
             <IconButton className={classes.searchIcon} aria-label="menu">
               <SearchIcon />

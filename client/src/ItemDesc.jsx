@@ -13,8 +13,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { mdiHeartOutline } from '@mdi/js';
+import { mdiHeart } from '@mdi/js';
 import { mdiExportVariant } from '@mdi/js';
 import Icon from '@mdi/react';
+import { mdiCubeSend } from '@mdi/js';
+import { mdiTruckFast } from '@mdi/js';
 
 
 //window.changeWindow = new Event("changeWindow");
@@ -22,6 +25,9 @@ export default class App extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
+        iconColor: '#0471AF',
+        iconHeart: mdiHeartOutline,
+        iconTxt: 'SAVE',
         stock: [{
             ID: '',
             Prices: '',
@@ -32,7 +38,7 @@ export default class App extends React.Component {
       };
       this.getTask = this.getTask.bind(this);
       this.showDiscount = this.getTask.bind(this);
-
+      this.changeHeart = this.changeHeart.bind(this);
     }
 
     getTask() {
@@ -44,13 +50,29 @@ export default class App extends React.Component {
             this.setState({
                 stock: results.data,
                 //default: results.data[100],
-                itemDescs: results.data[100].Descriptions.split(', '),
-                price: results.data[100].Prices.toFixed(2),
-                fakePrice: results.data[100].Mockprice.toFixed(2),
-                discount: results.data[100].Discount
+                itemDescs: results.data[12].Descriptions.split(', '),
+                price: results.data[12].Prices.toFixed(2),
+                fakePrice: results.data[12].Mockprice.toFixed(2),
+                discount: results.data[12].Discount
             });
         });
         
+    }
+
+    changeHeart() {
+      if (this.state.iconHeart === mdiHeartOutline) {
+        this.setState({
+            iconHeart: mdiHeart,
+            iconColor: '#DD0637',
+            iconTxt: 'SAVED'
+        });
+      } else {
+        this.setState({
+          iconHeart: mdiHeartOutline,
+          iconColor: '#0471AF',
+          iconTxt: 'SAVE'
+      });
+      }
     }
 
     componentWillMount(){
@@ -95,13 +117,13 @@ export default class App extends React.Component {
                   </ul>
                   <hr></hr>
                       <div className="btngrp">
-                      <button className="saveButton">
-                          <Icon path={mdiHeartOutline}
+                      <button className="saveButton" onClick={this.changeHeart}>
+                          <Icon path={this.state.iconHeart}
                             title="Favorite"
                             size="14px"
-                            color="#0471AF"
+                            color={this.state.iconColor}
                           />
-                          <span id="saveTxt">SAVE</span>
+                          <span id="saveTxt">{this.state.iconTxt}</span>
                       </button>
                       <button className="saveButton">
                           <Icon path={mdiExportVariant}
@@ -109,7 +131,7 @@ export default class App extends React.Component {
                             size="14px"
                             color="#0471AF"
                           />
-                          <span id="saveTxt">SAVE</span>
+                          <span id="saveTxt">SHARE</span>
                       </button>
                       </div>
                     
