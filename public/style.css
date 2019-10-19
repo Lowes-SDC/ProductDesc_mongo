@@ -244,3 +244,42 @@ html, body {
     white-space: nowrap;
     font-weight: 400;
   }
+  h4 {
+    font-size: 1.2857142857142858rem;
+    color: #333;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    margin: 0 0 5px;
+    padding: 0;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center!important;
+    margin-top: 0%;
+  }
+
+  .availIcons {
+    text-align: center!important;
+    font-weight: 400;
+    float: left;
+    font-size: 2em;
+    margin-left: 7%;
+  }
+
+  .shipAvailContainer {
+
+  }
+
+  .ready4pickup {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1rem;
+    line-height: 1.4em;
+    color: #333;
+    max-width: 190px;
+  }

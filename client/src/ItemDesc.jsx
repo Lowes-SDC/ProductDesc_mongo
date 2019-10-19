@@ -18,6 +18,8 @@ import { mdiExportVariant } from '@mdi/js';
 import Icon from '@mdi/react';
 import { mdiCubeSend } from '@mdi/js';
 import { mdiTruckFast } from '@mdi/js';
+import { mdiCheckboxMarkedCircle } from '@mdi/js';
+import { mdiAlphaXCircle } from '@mdi/js';
 
 
 //window.changeWindow = new Event("changeWindow");
@@ -91,7 +93,7 @@ export default class App extends React.Component {
       return (
         <div className="">
             <Paper className="description">
-              <Grid container wrap="nowrap" spacing={2}>
+              <Grid container wrap="nowrap">
                 <Grid item xs zeroMinWidth>
                   {
                     this.state.discount < 1 ?
@@ -115,6 +117,7 @@ export default class App extends React.Component {
                     {this.state.itemDescs.map(value => (
                     <li key={value} className="bulletpoint">{value}</li>))}
                   </ul>
+
                   <hr></hr>
 
                   <div className="number-input cartForm">
@@ -124,47 +127,69 @@ export default class App extends React.Component {
                   </div>
 
                   <button className="addToCart">
-                          <span id="addTxt">ADD TO CART</span>
-                      </button>
+                    <span id="addTxt">ADD TO CART</span>
+                  </button>
 
+                  <div className="btngrp">
+                  <button className="saveButton" onClick={this.changeHeart}>
+                      <Icon path={this.state.iconHeart}
+                        title="Favorite"
+                        size="14px"
+                        color={this.state.iconColor}
+                      />
+                      <span id="saveTxt">{this.state.iconTxt}</span>
+                  </button>
+                  <button className="saveButton">
+                      <Icon path={mdiExportVariant}
+                        title="Favorite"
+                        size="14px"
+                        color="#0471AF"
+                      />
+                      <span id="saveTxt">SHARE</span>
+                  </button>
+                  </div>
 
-
-
-
-
-
-
-
-                      <div className="btngrp">
-                      <button className="saveButton" onClick={this.changeHeart}>
-                          <Icon path={this.state.iconHeart}
-                            title="Favorite"
-                            size="14px"
-                            color={this.state.iconColor}
-                          />
-                          <span id="saveTxt">{this.state.iconTxt}</span>
-                      </button>
-                      <button className="saveButton">
-                          <Icon path={mdiExportVariant}
-                            title="Favorite"
-                            size="14px"
-                            color="#0471AF"
-                          />
-                          <span id="saveTxt">SHARE</span>
-                      </button>
-                      </div>
-                    
-                  
-                      
                   <hr></hr>
                 </Grid>
               </Grid>
-              
             </Paper>
             <Paper className="">
-              <Grid container wrap="nowrap" spacing={2}>
+              <Grid container wrap="nowrap" spacing={0}>
                 <Grid item xs>
-                  <Typography>message</Typography>
+                  <div className="shipAvailContainer">
+                    <div className="availIcons">
+                    <div>
+                      <Icon path={mdiCubeSend}
+                            title="Favorite"
+                            size="33px"
+                      />
+                      <h4>Ships to Store FREE</h4>
+                    </div>
+                    <div>
+                      <Icon path={mdiCheckboxMarkedCircle}
+                        title="Favorite"
+                        size="14px"
+                        color="#338700"
+                      />
+                      <span className="ready4pickup">Ready for pickup: Estimated by 10/30/2019</span>
+                    </div>
+                    </div>
+
+
+                    <div className="availIcons">
+                    <div>
+                      <Icon path={mdiTruckFast} 
+                          title="Favorite"
+                          size="33px"
+                      />
+                      <h4>FREE Shipping</h4>
+                    </div>
+                    <div>
+                      <p className="ready4pickup">Ready for delivery: Estimated on 10/30/2019</p>
+                    </div>
+                    </div>
+                  </div>
+                  
                 </Grid>
               </Grid>
             </Paper>
@@ -178,3 +203,6 @@ export default class App extends React.Component {
   };
 
   ReactDOM.render(<App />, document.getElementById("description"));
+
+
+  // <Typography>message to the wise and I am just seeing if something of this sort will fir into the space</Typography>
