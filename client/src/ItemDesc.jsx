@@ -12,6 +12,10 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import { mdiHeartOutline } from '@mdi/js';
+import { mdiExportVariant } from '@mdi/js';
+import Icon from '@mdi/react';
+
 
 //window.changeWindow = new Event("changeWindow");
 export default class App extends React.Component {
@@ -27,6 +31,7 @@ export default class App extends React.Component {
         itemDescs: [],
       };
       this.getTask = this.getTask.bind(this);
+      this.showDiscount = this.getTask.bind(this);
 
     }
 
@@ -36,20 +41,14 @@ export default class App extends React.Component {
             url: '/todo',
         })
         .then(results => {
-            let discount = Math.floor(Math.random() * (51 - 3) ) + 3;
             this.setState({
                 stock: results.data,
-                default: results.data[25],
-                itemDescs: results.data[25].Descriptions.split(', '),
-                price: results.data[25].Prices,
-                fakePrice: Math.round(100*((results.data[25].Prices/(100-discount)) * 100))/100,
-                discount: discount
+                //default: results.data[100],
+                itemDescs: results.data[100].Descriptions.split(', '),
+                price: results.data[100].Prices.toFixed(2),
+                fakePrice: results.data[100].Mockprice.toFixed(2),
+                discount: results.data[100].Discount
             });
-            //console.log(this.state.stock);
-            //console.log(this.state.itemDescs);
-            console.log(results.data[25]);
-            console.log(this.state.price);
-            console.log(this.state.fakePrice);
         });
         
     }
@@ -72,9 +71,18 @@ export default class App extends React.Component {
             <Paper className="description">
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item xs zeroMinWidth>
-                  <p className="price"><sup className="first-letter">$</sup>{this.state.price}
-                  <span className="prevPrice">Was {this.state.fakePrice}</span></p>
-                  <p className="save">Save {this.state.discount}%</p>
+                  {
+                    this.state.discount < 1 ?
+                    (<p className="price"><sup className="first-letter">$</sup>{this.state.price}</p>)
+                    :
+                    (
+                      <React.Fragment>
+                        <p className="price"><sup className="first-letter">$</sup>{this.state.price}
+                        <span className="prevPrice">Was {this.state.fakePrice}</span></p>
+                        <p className="save">SAVE {this.state.discount}%</p>
+                        </React.Fragment>
+                    )
+                  }
                 </Grid>
               </Grid>
             </Paper>
@@ -85,9 +93,30 @@ export default class App extends React.Component {
                     {this.state.itemDescs.map(value => (
                     <li key={value} className="bulletpoint">{value}</li>))}
                   </ul>
-                  <hr className=""></hr>
+                  <hr></hr>
+                      <div className="btngrp">
+                      <button className="saveButton">
+                          <Icon path={mdiHeartOutline}
+                            title="Favorite"
+                            size="14px"
+                            color="#0471AF"
+                          />
+                          <span id="saveTxt">SAVE</span>
+                      </button>
+                      <button className="saveButton">
+                          <Icon path={mdiExportVariant}
+                            title="Favorite"
+                            size="14px"
+                            color="#0471AF"
+                          />
+                          <span id="saveTxt">SAVE</span>
+                      </button>
+                      </div>
+                    
+                  
+                      
+                  <hr></hr>
                 </Grid>
-                
               </Grid>
               
             </Paper>
@@ -98,7 +127,6 @@ export default class App extends React.Component {
                 </Grid>
               </Grid>
             </Paper>
-            <Footer/>
         </div>
       )
     }

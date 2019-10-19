@@ -1,3 +1,14 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  /* background-color: #0471AF; */
+  color: #FFF;
+  height:auto!important;
+}
+
+#catlink {
+  margin: 2.4%;
+}
 .wrap {
     margin-top: -1.2%;
   }
@@ -19,9 +30,6 @@
   .left {
     height: 0px;
     width: 0%;
-    padding: 0%;
-
-    margin-right: -15%;
   }
   
   .right {
@@ -32,12 +40,13 @@
   }
 
   #main {
-    width: 130%;
+    margin-left: -48%;
   }
 
   #description {
     width: 45%;
     max-width: 1200px;
+    margin-left: 55%;
   }
 
   .bullets {
@@ -71,6 +80,7 @@
     font-weight: 700;
     font-family: Helvetica,Arial,sans-serif;
     margin-bottom: 0%;
+    margin-left: 4%;
   }
 
   .prevPrice {
@@ -83,9 +93,45 @@
   .save {
     font-size: 1.1428571428571428rem;
     font-family: Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     color: #338700!important;
     margin-top: 0%;
+    margin-left: 4%;
+  }
+
+
+
+
+  button {
+    padding: 0 20px;
+    height: 54px;
+    min-height: 54px;
+    max-height: 54px;
+    width: 50%;
+    background-color: white;
+    border: 1px solid #CCC;
+    color: #0471AF;
+    padding: 15px 32px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    font-size: .875rem;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #e7e7e7;
+  }
+
+  .btngrp {
+    margin: 1.5rem;
+    
+  }
+
+  #saveTxt {
+    /* line-height: 200%; */
+    vertical-align: top
   }
 
   

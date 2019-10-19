@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
       color: 'inherit',
     },
     inputInput: {
-      padding: theme.spacing(1, 1, 1, 7),
+      padding: theme.spacing(1, 8, 1, 7),
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
@@ -151,12 +151,20 @@ export default function Header(props) {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" color='inherit'>
+      <AppBar position="static" className="header" color='inherit'>
         <Toolbar>
             <StepLabel icon={ <img src="https://fec-hallowes.s3.amazonaws.com/Hallowes.png" alt="" width="75" height="65" /> } />
-            <button className="header" title="Shop">Shop</button>
-            <button className="header" title="Ideas">Ideas</button>
-            <button className="header" title="Savings">Savings</button>
+            <div>
+              <span><button className="headerCat" title="Shop">Shop</button></span>
+              <span><button className="headerCat" title="Ideas">Ideas</button></span>
+              <span><button className="headerCat" title="Savings">Savings</button></span>
+              
+              
+              
+              
+              
+            </div>
+            
           {/* <div className={classes.search}>
             <IconButton className={classes.searchIcon} aria-label="search">
                 <SearchIcon />
@@ -187,7 +195,7 @@ export default function Header(props) {
 
           <div className={classes.grow} />
             <div className={classes.sectionDesktop}>            
-              <IconButton 
+              <IconButton className="iconPersonSize"
                 title="MyHallowes"
                 edge="end"
                 aria-label="account of current user"

@@ -1,9 +1,12 @@
 import React from 'react';
+import ReactDOM from "react-dom";
 
-export default props => {
+export default function Footer(props) {
     return (
         <div>
-            <h1>Footer</h1>
+            <p>Footer</p>
         </div>
     )
 }
+
+ReactDOM.render(<Footer />, document.getElementById("foot"));
