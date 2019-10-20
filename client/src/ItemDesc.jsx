@@ -41,6 +41,8 @@ export default class App extends React.Component {
       this.getTask = this.getTask.bind(this);
       this.showDiscount = this.getTask.bind(this);
       this.changeHeart = this.changeHeart.bind(this);
+      this.handleDecrement = this.handleDecrement.bind(this);
+      this.handleIncrement = this.handleIncrement.bind(this);
     }
 
     getTask() {
@@ -52,10 +54,10 @@ export default class App extends React.Component {
             this.setState({
                 stock: results.data,
                 //default: results.data[100],
-                itemDescs: results.data[83].Descriptions.split(', '),
-                price: results.data[83].Prices.toFixed(2),
-                fakePrice: results.data[83].Mockprice.toFixed(2),
-                discount: results.data[83].Discount
+                itemDescs: results.data[88].Descriptions.split(', '),
+                price: results.data[88].Prices.toFixed(2),
+                fakePrice: results.data[88].Mockprice.toFixed(2),
+                discount: results.data[88].Discount
             });
         });
         
@@ -77,6 +79,18 @@ export default class App extends React.Component {
       }
     }
 
+    handleDecrement() {
+      if (document.getElementsByClassName("quantity").quantity.value > 1) {
+        document.getElementsByClassName("quantity").quantity.value--;
+      }
+    }
+
+    handleIncrement() {
+      if (document.getElementsByClassName("quantity").quantity.value) {
+        document.getElementsByClassName("quantity").quantity.value++;
+      }
+    }
+
     componentWillMount(){
       this.getTask();
     }
@@ -91,7 +105,7 @@ export default class App extends React.Component {
 
     render() {
       return (
-        <div className="">
+        <React.Fragment>
             <Paper className="description">
               <Grid container wrap="nowrap">
                 <Grid item xs zeroMinWidth>
@@ -121,9 +135,9 @@ export default class App extends React.Component {
                   <hr></hr>
 
                   <div className="number-input cartForm">
-                    <button onClick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                    <input className="quantity" min="1" name="quantity" value="1" type="number"></input>
-                    <button onClick="this.parentNode.querySelector('input[type=number]').stepUp()" className="plus"></button>
+                    <button onClick={this.handleDecrement} ></button>
+                    <input className="quantity" min="1" name="quantity" defaultValue="1" type="number"></input>
+                    <button onClick={this.handleIncrement} className="plus"></button>
                   </div>
 
                   <button className="addToCart">
@@ -166,7 +180,7 @@ export default class App extends React.Component {
                       <h4>Ships to Store FREE</h4>
                     </div>
                     <div>
-                      <Icon path={mdiCheckboxMarkedCircle}
+                      <Icon path={mdiCheckboxMarkedCircle} className="availPointer"
                         title="Favorite"
                         size="14px"
                         color="#338700"
@@ -174,18 +188,21 @@ export default class App extends React.Component {
                       <span className="ready4pickup">Ready for pickup: Estimated by 10/30/2019</span>
                     </div>
                     </div>
-
-
                     <div className="availIcons">
                     <div>
-                      <Icon path={mdiTruckFast} 
-                          title="Favorite"
-                          size="33px"
+                      <Icon path={mdiTruckFast}
+                            title="Share"
+                            size="33px"
                       />
                       <h4>FREE Shipping</h4>
                     </div>
                     <div>
-                      <p className="ready4pickup">Ready for delivery: Estimated on 10/30/2019</p>
+                      <Icon path={mdiCheckboxMarkedCircle} className="availPointer"
+                        title="Available"
+                        size="14px"
+                        color="#338700"
+                      />
+                      <span className="ready4pickup" id="ready4delivery">Ready for delivery: Estimated by 10/30/2019</span>
                     </div>
                     </div>
                   </div>
@@ -193,16 +210,12 @@ export default class App extends React.Component {
                 </Grid>
               </Grid>
             </Paper>
-        </div>
+        </React.Fragment>
       )
     }
   }
 
-  App.propTypes = {
-    classes: PropTypes.object.isRequired,
-  };
-
   ReactDOM.render(<App />, document.getElementById("description"));
 
 
-  // <Typography>message to the wise and I am just seeing if something of this sort will fir into the space</Typography>
+  // <Typography></Typography>

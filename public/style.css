@@ -190,6 +190,10 @@ html, body {
     margin: 0;
     position: relative;
   }
+
+  .number-input button:hover {
+    background-color: #e7e7e7;
+  }
   
   .number-input button:before,
   .number-input button:after {
@@ -244,6 +248,7 @@ html, body {
     white-space: nowrap;
     font-weight: 400;
   }
+
   h4 {
     font-size: 1.2857142857142858rem;
     color: #333;
@@ -276,10 +281,18 @@ html, body {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    margin-inline-start: 0px;
+    margin-inline-start: -50px;
     margin-inline-end: 0px;
     font-size: 1rem;
-    line-height: 1.4em;
     color: #333;
-    max-width: 190px;
+    max-width: 180px;
+    float: right;
+  }
+
+  .availPointer {
+    margin: 0%;
+  }
+
+  #ready4delivery {
+    margin-inline-start: -20px;
   }
