@@ -53,7 +53,15 @@ const useStyles = makeStyles(theme => ({
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: 300,
+        width: 300, //700 for no div
+      },
+    },
+    inputInputFocus: {
+      padding: theme.spacing(1, 8, 1, 7),
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('md')]: {
+        width: 700, //700 for no div
       },
     },
     sectionDesktop: {
@@ -72,11 +80,14 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header(props) {
   const classes = useStyles();
+  let hide = true;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  
 
   const handleProfileMenuOpen = event => {
     setAnchorEl(event.currentTarget);
@@ -94,6 +105,26 @@ export default function Header(props) {
   const handleMobileMenuOpen = event => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+  document.addEventListener('click', function(event) {
+    var isClickInside = document.getElementById("searchBar").contains(event.target);
+    if (!isClickInside) {
+      document.getElementById("searchBarLong").style.display = "none";
+      document.getElementById("searchBarShort").style.display = "block";
+      document.getElementById("tab1").style.display = "block";
+      document.getElementById("tab2").style.display = "block";
+      document.getElementById("tab3").style.display = "block";
+  
+    } else {
+      document.getElementById("searchBarLong").style.display = "block";
+      document.getElementById("searchBarShort").style.display = "none";
+      document.getElementById("tab1").style.display = "none";
+      document.getElementById("tab2").style.display = "none";
+      document.getElementById("tab3").style.display = "none";
+    }
+  });
+
+  
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -155,20 +186,29 @@ export default function Header(props) {
         <Toolbar>
             <StepLabel icon={ <img src="https://fec-hallowes.s3.amazonaws.com/Hallowes.png" alt="" width="75" height="65" /> } />
             <React.Fragment>
-              <button className="headerCat" title="Shop">Shop</button>
-              <button className="headerCat" title="Ideas">Ideas</button>
-              <button className="headerCat" title="Savings">Savings</button>
+              <button className="headerCat" id="tab1" title="Shop">Shop</button>
+              <button className="headerCat" id="tab2" title="Ideas">Ideas</button>
+              <button className="headerCat" id="tab3" title="Savings">Savings</button>
             </React.Fragment>
               
 
-          <Paper className={classes.search}>
+          <Paper className={classes.search} id="searchBar">
             <IconButton className={classes.searchIcon} aria-label="menu">
               <SearchIcon />
             </IconButton>
-            <InputBase
+
+            <InputBase id="searchBarShort"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
+              }}
+              placeholder="What are you looking for today?"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+            <InputBase id="searchBarLong"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInputFocus,
               }}
               placeholder="What are you looking for today?"
               inputProps={{ 'aria-label': 'search' }}
@@ -251,68 +291,4 @@ ReactDOM.render(<Header />, document.getElementById("head"));
             </button> */}
 
             //<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
-
-
-            
-// const useStyles = makeStyles(theme => ({
-//   grow: {
-//     flexGrow: 1,
-//   },
-//   menuButton: {
-//     marginRight: theme.spacing(2),
-//   },
-//   title: {
-//     display: 'none',
-//     [theme.breakpoints.up('sm')]: {
-//       display: 'block',
-//     },
-//   },
-//   search: {
-//     position: 'relative',
-//     borderRadius: theme.shape.borderRadius,
-//     borderColor: 'green',
-//     backgroundColor: fade(theme.palette.common.white, 0.15),
-//     '&:hover': {
-//       backgroundColor: fade(theme.palette.common.white, 0.25),
-//     },
-//     marginRight: theme.spacing(2),
-//     marginLeft: 0,
-//     width: '100%',
-//     [theme.breakpoints.up('sm')]: {
-//       marginLeft: theme.spacing(3),
-//       width: 'auto',
-//     },
-//   },
-//   searchIcon: {
-//     padding: theme.spacing(1, 1, 1, 7),
-//     width: '0%',
-//     height: '100%',
-//     position: 'absolute',
-//     pointerEvents: 'none',
-//     display: 'flex'
-//   },
-//   inputRoot: {
-//     color: 'inherit',
-//   },
-//   inputInput: {
-//     padding: theme.spacing(1, 1, 1, 100),
-//     transition: theme.transitions.create('width'),
-//     width: '100%',
-//     [theme.breakpoints.up('md')]: {
-//       width: 200,
-//     },
-//   },
-//   sectionDesktop: {
-//     display: 'none',
-//     [theme.breakpoints.up('md')]: {
-//       display: 'flex',
-//     },
-//   },
-//   sectionMobile: {
-//     display: 'flex',
-//     [theme.breakpoints.up('md')]: {
-//       display: 'none',
-//     },
-//   },
-// }));
 
