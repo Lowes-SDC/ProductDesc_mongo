@@ -1,0 +1,59 @@
+a {
+    text-decoration: none;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+a:visited {
+    color: #0471AF;
+}
+
+a:hover {
+    color: #0471AF;
+}
+
+a:active {
+    color: #0471AF;
+}
+
+.terms {
+    display: flex;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    font-size: 14px;
+    padding: 0;
+    clear: both;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+
+}
+
+.listItem {
+    width: 25%;
+    display: list-item;
+    float: left;
+    font-size: 16px;
+    text-align: center!important;
+    padding: 0!important;
+}
+.copyright {
+    font-family: Helvetica,Arial,sans-serif;
+    color: #5D5D5D!important;
+    text-align: center!important;
+    font-size: 14px;
+    line-height: 1.4em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0 0 5px 0;
+}
