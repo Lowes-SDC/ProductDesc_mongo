@@ -117,23 +117,23 @@ export default function Footer(props) {
             <div>
                 <div className="terms">
                     <ul class="list">
-                        <li class="listItem">
-                            <a class="secondary-font navigation-item font-weight-normal" href="#">
+                        <li className="listItem">
+                            <a href="#">
                                 Terms
                             </a>
                         </li>
-                        <li class="listItem">
-                            <a class="secondary-font navigation-item font-weight-normal" href="#">
+                        <li className="listItem">
+                        <a href="#">
                                 Privacy Statement
                             </a>
                         </li>
-                        <li class="listItem">
-                            <a class="secondary-font navigation-item font-weight-normal" href="#">
+                        <li className="listItem">
+                            <a href="#">
                                 CA Privacy Rights
                             </a>
                         </li>
-                        <li class="listItem">
-                            <a class="secondary-font navigation-item font-weight-normal" href="#">
+                        <li className="listItem">
+                            <a href="#">
                                 Interest-Based Ads
                             </a>
                         </li>
