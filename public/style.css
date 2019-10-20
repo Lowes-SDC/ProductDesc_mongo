@@ -1,298 +1,279 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  /* background-color: #0471AF; */
   color: #FFF;
   height:auto!important;
 }
 
-#catlink {
+#catlink { /*this is only for spacing of camerons component */
   margin: 2.4%;
 }
+
 .wrap {
     margin-top: -1.2%;
-  }
+}
   
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 86.8%;
-  }
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 86.8%;
+}
   
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
   
-  .left {
-    height: 0px;
-    width: 0%;
-  }
+.left {
+  height: 0px;
+  width: 0%;
+}
   
-  .right {
-    height: 0px;
-    width: 0%;
-    padding: 0%;
-    margin-left: 50%;
-  }
+.right {
+  height: 0px;
+  width: 0%;
+  padding: 0%;
+  margin-left: 50%;
+}
 
-  #main {
-    margin-left: 15%;
-  }
+#main {
+  margin-left: 15%;
+}
 
-  #description {
-    width: 45%;
-    max-width: 1200px;
-    margin-left: 55%;
-  }
+#description {
+  width: 45%;
+  max-width: 1200px;
+  margin-left: 55%;
+}
 
-  .bullets {
-    line-height: 1.4rem;
-  }
+.bullets {
+  line-height: 1.4rem;
+}
 
-  .bulletpoint {
-    font-family: Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    margin-bottom: 10px!important;
-    margin-right: 5em;
-  }
+.bulletpoint {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px!important;
+  margin-right: 5em;
+}
 
-  hr {
-    margin-bottom: 20px!important;
-    border: 0;
-    height: 1px;
-    background: #E5E5E5;
-    margin-left:1em;
-    margin-right: 1em;
-    
-  }
-
-  .first-letter {
-    font-size: 40%;
-    vertical-align: super;
-  }
-
-  .price {
-    font-size: 2.5714285714285716rem;
-    font-weight: 700;
-    font-family: Helvetica,Arial,sans-serif;
-    margin-bottom: 0%;
-    margin-left: 4%;
-  }
-
-  .prevPrice {
-    font-size: .8571428571428571rem;
-    font-weight: 100;
-    font-family: Helvetica,Arial,sans-serif;
-    color: #5D5D5D!important;
-  }
-
-  .save {
-    font-size: 1.1428571428571428rem;
-    font-family: Helvetica,Arial,sans-serif;
-    font-weight: 600;
-    color: #338700!important;
-    margin-top: 0%;
-    margin-left: 4%;
-  }
-
-
-
-
-  button {
-    padding: 0 20px;
-    height: 54px;
-    min-height: 54px;
-    max-height: 54px;
-    width: 50%;
-    background-color: white;
-    border: 1px solid #CCC;
-    color: #0471AF;
-    padding: 15px 32px;
-    font-family: Helvetica,Arial,sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    font-size: .875rem;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-
-  .saveButton:hover {
-    background-color: #e7e7e7;
-    outline: none;
-  }
-
-  .btngrp {
-    margin: 1.5rem;
-  }
-
-  #saveTxt {
-    /* line-height: 200%; */
-    vertical-align: top
-  }
-
-  .cartForm {
-    margin-left: 4.5%;
-    max-height: 54px;
-  }
-
-  .quantity {
-    height: 50px;
-    min-height: 50px;;
-    width: 54px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  input[type="number"] {
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
-  }
+hr {
+  margin-bottom: 20px!important;
+  border: 0;
+  height: 1px;
+  background: #E5E5E5;
+  margin-left:1em;
+  margin-right: 1em;
   
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-  }
-  
-  .number-input {
-    border: 2px solid #ddd;
-    display: inline-flex;
-  }
-  
-  .number-input,
-  .number-input * {
-    box-sizing: border-box;
-  }
-  
-  .number-input button {
-    outline:none;
-    -webkit-appearance: none;
-    background-color: transparent;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    cursor: pointer;
-    margin: 0%;
-    position: relative;
-  }
+}
 
-  .number-input button:hover {
-    background-color: #e7e7e7;
-  }
-  
-  .number-input button:before,
-  .number-input button:after {
-    display: inline-block;
-    position: absolute;
-    content: '';
-    width: 1rem;
-    height: 2px;
-    background-color: #0471AF;
-    transform: translate(-50%, -50%);
-  }
-  .number-input button.plus:after {
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
-  
-  .number-input input[type=number] {
-    font-family: sans-serif;
-    max-width: 5rem;
-    padding: .5rem;
-    border: solid #ddd;
-    border-width: 0 2px;
-    font-size: 1rem;
-    height: 3rem;
-    text-align: center;
-  }
-  
+.first-letter {
+  font-size: 40%;
+  vertical-align: super;
+}
 
-  .addToCart {
-    color: #FFF;
-    background-color: #3da100;
-    border-width: 0 2px;
-    padding: 0 20px;
-    height: 54px;
-    width:210.69px;
-    min-height: 54px;
-    max-height: 54px;
-    vertical-align: top;
-    margin-right: 4%;
-    margin-left: 1.8em;
-    border: .8px solid #3da100;
-  }
+.price {
+  font-size: 2.5714285714285716rem;
+  font-weight: 700;
+  font-family: Helvetica,Arial,sans-serif;
+  margin-bottom: 0%;
+  margin-left: 4%;
+}
 
-  .addToCart:hover {
-    background-color: #3e8e41;
-  }
+.prevPrice {
+  font-size: .8571428571428571rem;
+  font-weight: 100;
+  font-family: Helvetica,Arial,sans-serif;
+  color: #5D5D5D!important;
+}
 
-  #addTxt {
-    font-family: Helvetica,Arial,sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-appearance: none;
-    white-space: nowrap;
-    font-weight: 400;
-  }
+.save {
+  font-size: 1.1428571428571428rem;
+  font-family: Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  color: #338700!important;
+  margin-top: 0%;
+  margin-left: 4%;
+}
 
-  h4 {
-    font-size: 1.2857142857142858rem;
-    color: #333;
-    font-family: Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    margin: 0 0 5px;
-    padding: 0;
-    display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-align: center!important;
-    margin-top: 0%;
-  }
+button {
+  padding: 0 20px;
+  height: 54px;
+  min-height: 54px;
+  max-height: 54px;
+  width: 50%;
+  background-color: white;
+  border: 1px solid #CCC;
+  color: #0471AF;
+  padding: 15px 32px;
+  font-family: Helvetica,Arial,sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  font-size: .875rem;
+  margin: 0 auto;
+  cursor: pointer;
+}
 
-  .availIcons {
-    text-align: center!important;
-    font-weight: 400;
-    float: left;
-    font-size: 2em;
-    margin-left: 7%;
-  }
+.saveButton:hover {
+  background-color: #e7e7e7;
+  outline: none;
+}
 
-  .shipAvailContainer {
+.btngrp {
+  margin: 1.5rem;
+}
 
-  }
+#saveTxt {
+  /* line-height: 200%; */
+  vertical-align: top
+}
 
-  .ready4pickup {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: -50px;
-    margin-inline-end: 0px;
-    font-size: 1rem;
-    color: #333;
-    max-width: 180px;
-    float: right;
-  }
+.cartForm {
+  margin-left: 4.5%;
+  max-height: 54px;
+}
 
-  .availPointer {
-    margin: 0%;
-  }
+.quantity {
+  height: 50px;
+  min-height: 50px;;
+  width: 54px;
+}
 
-  #ready4delivery {
-    margin-inline-start: -20px;
-  }
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 2px solid #ddd;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  margin: 0%;
+  position: relative;
+}
+
+.number-input button:hover {
+  background-color: #e7e7e7;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 1rem;
+  height: 2px;
+  background-color: #0471AF;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: .5rem;
+  border: solid #ddd;
+  border-width: 0 2px;
+  font-size: 1rem;
+  height: 3rem;
+  text-align: center;
+}
+
+.addToCart {
+  color: #FFF;
+  background-color: #3da100;
+  border-width: 0 2px;
+  padding: 0 20px;
+  height: 54px;
+  width:210.69px;
+  min-height: 54px;
+  max-height: 54px;
+  vertical-align: top;
+  margin-right: 4%;
+  margin-left: 1.8em;
+  border: .8px solid #3da100;
+}
+
+.addToCart:hover {
+  background-color: #3e8e41;
+}
+
+#addTxt {
+  font-family: Helvetica,Arial,sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.2857142857142858rem;
+  color: #333;
+  font-family: Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  margin: 0 0 5px;
+  padding: 0;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center!important;
+  margin-top: 0%;
+}
+
+.availIcons {
+  text-align: center!important;
+  font-weight: 400;
+  float: left;
+  font-size: 2em;
+  margin-left: 7%;
+}
+
+.ready4pickup {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: -50px;
+  margin-inline-end: 0px;
+  font-size: 1rem;
+  color: #333;
+  max-width: 180px;
+  float: right;
+}
+
+.availPointer {
+  margin: 0%;
+}
+
+#ready4delivery {
+  margin-inline-start: -20px;
+}
