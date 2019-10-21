@@ -111,6 +111,7 @@ export default function Footer(props) {
                     </li>
                 </ul>
             </div>
+            <hr className="footerHR"></hr>
             <div className="placeholder">
             <p className="placeholder">Something</p>
             </div>

@@ -33,7 +33,6 @@ a:active {
 }
 
 .colgil {
-    margin-bottom: 10%;
     padding-top: 25px;
     display: flex;
     margin-left: 15%;
@@ -73,6 +72,15 @@ a:active {
     border-radius: 75%;
     display: inline-block;
     line-height: .5em;
+}
+
+.footerHR {
+    background-color: #FFF!important;
+    height: 3px;
+    margin-bottom: 50px;
+    border: 0;
+    margin-left: 19%;
+    margin-right: 30%;
 }
 
 .termsParent {
