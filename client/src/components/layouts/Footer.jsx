@@ -11,133 +11,135 @@ import { mdiCellphoneAndroid } from '@mdi/js';
 export default function Footer(props) {
     return (
         <div>
-            <div>
-            <ul class="">
-                <li class="">
-                    <a href="#" target="_self" title="Contact Us" data-linkid="contact_us">
-                        <div class="media">
-                            <div class="">
-                                <span class="">
-                                    <Icon path={mdiCommentQuestionOutline}
-                                        title="Contact Us"
-                                        size="18px"
-                                    />
-                                </span>
+            <div className="colgil">
+                <ul className="colgilList">
+                    <li className="colgilItem">
+                        <a href="#" title="Contact Us">
+                            <div className="media">
+                                <div className="colgilSpacing">
+                                    <span className="colgilBubble">
+                                        <Icon path={mdiCommentQuestionOutline}
+                                            title="Contact Us"
+                                            size="18px"
+                                            color= "#0471AF"
+                                        />
+                                    </span>
+                                </div>
+                                <div className="">Contact Us</div>
                             </div>
-                            <div class="">Contact Us</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" target="_self" title="Order Status" data-linkid="order_status">
-                        <div class="media">
-                            <div class="">
-                                <span class="">
-                                    <Icon path={mdiCubeOutline}
-                                        title="Order Status"
-                                        size="18px"
-                                    />
-                                </span>
+                        </a>
+                    </li>
+                    <li className="colgilItem">
+                        <a href="#" title="Order Status" >
+                            <div className="media">
+                                <div className="colgilSpacing">
+                                    <span className="colgilBubble">
+                                        <Icon path={mdiCubeOutline}
+                                            title="Order Status"
+                                            size="18px"
+                                            color= "#0471AF"
+                                        />
+                                    </span>
+                                </div>
+                                <div className="">Order Status</div>
                             </div>
-                            <div class="">Order Status</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" target="_self" title="Hallowe's Credit Cards" data-linkid="lowe_s_credit_cards">
-                        <div class="media">
-                            <div class="">
-                                <span class="">
-                                    <Icon path={mdiCardBulletedOutline}
-                                        title="Hallowe's Credit Cards"
-                                        size="18px"
-                                    />
-                                </span>
+                        </a>
+                    </li>
+                    <li className="colgilItem">
+                        <a href="#" title="Hallowe's Credit Cards">
+                            <div className="media">
+                                <div className="colgilSpacing">
+                                    <span className="colgilBubble">
+                                        <Icon path={mdiCardBulletedOutline}
+                                            title="Hallowe's Credit Cards"
+                                            size="18px"
+                                            color= "#0471AF"
+                                        />
+                                    </span>
+                                </div>
+                                <div className="">Hallowe's Credit Cards</div>
                             </div>
-                            <div class="">Hallowe's Credit Cards</div>
-                        </div>
-                    </a>
-                </li>
-                <div class=""></div>
-                <li class="">
-                    <a href="#" target="_self" title="Gift Cards" data-linkid="gift_cards">
-                        <div class="media">
-                            <div class="">
-                                <span class="">
-                                    <Icon path={mdiGiftOutline}
-                                        title="Gift Cards"
-                                        size="18px"
-                                    />
-                                </span>
+                        </a>
+                    </li>
+                    <li className="colgilItem">
+                        <a href="#" title="Gift Cards">
+                            <div className="media">
+                                <div className="colgilSpacing">
+                                    <span className="colgilBubble">
+                                        <Icon path={mdiGiftOutline}
+                                            title="Gift Cards"
+                                            size="18px"
+                                            color= "#0471AF"
+                                        />
+                                    </span>
+                                </div>
+                                <div className="">Gift Cards</div>
                             </div>
-                            <div class="">Gift Cards</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" target="_self" title="Installation Services" data-linkid="installation_services">
-                        <div class="media">
-                            <div class="">
-                                <span class="">
-                                    <Icon path={mdiWrench}
-                                        title="Installation Services"
-                                        size="18px"
-                                    />
-                                </span>
+                        </a>
+                    </li>
+                    <li className="colgilItem">
+                        <a href="#" title="Installation Services">
+                            <div className="media">
+                                <div className="colgilSpacing">
+                                    <span className="colgilBubble">
+                                        <Icon path={mdiWrench}
+                                            title="Installation Services"
+                                            size="18px"
+                                            color= "#0471AF"
+                                        />
+                                    </span>
+                                </div>
+                                <div className="">Installation Services</div>
                             </div>
-                            <div class="">Installation Services</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" target="_self" title="Hallowe's Apps" data-linkid="lowe_s_apps">
-                        <div class="media">
-                            <div class="">
-                                <span class="">
-                                    <Icon path={mdiCellphoneAndroid}
-                                        title="Hallowe's Apps"
-                                        size="18px"
-                                    />
-                                </span>
+                        </a>
+                    </li>
+                    <li className="colgilItem">
+                        <a href="#" title="Hallowe's Apps">
+                            <div className="media">
+                                <div className="colgilSpacing">
+                                    <span className="colgilBubble">
+                                        <Icon path={mdiCellphoneAndroid}
+                                            title="Hallowe's Apps"
+                                            size="18px"
+                                            color= "#0471AF"
+                                        />
+                                    </span>
+                                </div>
+                                <div className="">Hallowe's Apps</div>
                             </div>
-                            <div class="">Hallowe's Apps</div>
-                        </div>
-                    </a>
-                </li>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
+            <div className="placeholder">
+            <p className="placeholder">Something</p>
             </div>
             <div>
-                <div className="terms">
-                    <ul class="list">
-                        <li className="listItem">
+                <div className="termsParent">
+                    <div className="terms">
+                        <ul className="termsList">
+                            <li className="termsListItem">
+                                <a href="#">
+                                    Terms
+                                </a>
+                            </li>
+                            <li className="termsListItem">
                             <a href="#">
-                                Terms
-                            </a>
-                        </li>
-                        <li className="listItem">
-                        <a href="#">
-                                Privacy Statement
-                            </a>
-                        </li>
-                        <li className="listItem">
-                            <a href="#">
-                                CA Privacy Rights
-                            </a>
-                        </li>
-                        <li className="listItem">
-                            <a href="#">
-                                Interest-Based Ads
-                            </a>
-                        </li>
-                    </ul>
+                                    Privacy Statement
+                                </a>
+                            </li>
+                            <li className="termsListItem">
+                                <a href="#">
+                                    CA Privacy Rights
+                                </a>
+                            </li>
+                            <li className="termsListItem">
+                                <a href="#">
+                                    Interest-Based Ads
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <p className="copyright"> 
                     ©  2019 Hallowe's. All rights reserved maybe. Hallowe's and the Mario Design are not registered trademarks of LF, LLC.

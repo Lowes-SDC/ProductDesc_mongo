@@ -1,6 +1,23 @@
+#foot {
+    background-color: #f2f2f2;
+    font-weight: 400;
+    bottom: 0;
+    color: #0471AF;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 3%;
+    padding: 0;
+    width: 201%;
+    margin-left: -40%;
+}
+
 a {
     text-decoration: none;
     font-family: Helvetica,Arial,sans-serif;
+}
+
+.placeholder {
+    margin-top: 100px;
 }
 
 a:visited {
@@ -15,6 +32,57 @@ a:active {
     color: #0471AF;
 }
 
+.colgil {
+    margin-bottom: 10%;
+    padding-top: 25px;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 27.8%;
+}
+
+.colgilList {
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    width: 100%;
+}
+
+.colgilItem {
+    float: left;
+    text-align: center;
+    width: 14.6%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: list-item;
+    list-style: none;
+}
+
+.colgilSpacing {
+    margin-bottom: 15px
+}
+
+.colgilBubble {
+    border: 1px solid #ccc;
+    padding: 13px;
+    border-radius: 75%;
+    display: inline-block;
+    line-height: .5em;
+}
+
+.termsParent {
+    max-width: 1032px;
+    display: block;
+    margin-left: 21.5%;
+    margin-right: 30.5%;
+    padding: 0;
+}
+
 .terms {
     display: flex;
     font-size: 14px;
@@ -22,21 +90,16 @@ a:active {
     padding: 0;
 }
 
-.list {
+.termsList {
+    display: block;
     font-size: 14px;
     padding: 0;
     clear: both;
     width: 100%;
-    margin: 0;
-    box-sizing: border-box;
     list-style: none;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-
 }
 
-.listItem {
+.termsListItem {
     width: 25%;
     display: list-item;
     float: left;
@@ -56,4 +119,6 @@ a:active {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin: 0 0 5px 0;
+    margin-right: 7.8%;
+    padding-bottom: .95%;
 }
