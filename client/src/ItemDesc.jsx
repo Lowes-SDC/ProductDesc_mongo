@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./style/header.css";
+import "./style/style.css";
+import "./style/footer.css";
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import Header from "./components/layouts/Header.jsx";
