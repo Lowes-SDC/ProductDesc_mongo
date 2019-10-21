@@ -112,8 +112,117 @@ export default function Footer(props) {
                 </ul>
             </div>
             <hr className="footerHR"></hr>
-            <div className="placeholder">
-            <p className="placeholder">Something</p>
+            <div className="siteNav">
+                <div className="siteNavCol">
+                    <div className="">
+                        <h3 className="siteNavColTitle" tabindex="0">ABOUT LOWE'S</h3>
+                        <ul>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Company Overview
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Careers
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Investor Relations
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Newsroom
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Corporate Responsibility
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Lowe's Suppliers
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Affiliate Program
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="siteNavCol">
+                    <div className="">
+                        <h3 className="siteNavColTitle" tabindex="0">STORES &amp; SERVICES</h3>
+                        <ul>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Find a Store
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Store Directory
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Brand Directory
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">In-Store Services
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Lowe's For Pros
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Lowe's Canada
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Site Directory
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="siteNavCol">
+                    <div className="">
+                        <h3 className="siteNavColTitle" tabindex="0">CUSTOMER SERVICE</h3>
+                        <ul>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Rebates
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Returns &amp; Exchanges
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Shipping &amp; Delivery
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Special Orders
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Recalls &amp; Product Safety
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Protection Plans
+                                </a>
+                            </li>
+                            <li className="siteNavColList">
+                                <a className="" href="#">Military Discount
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    
+                </div>
+
+                
             </div>
             <div>
                 <div className="termsParent">

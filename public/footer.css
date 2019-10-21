@@ -83,6 +83,45 @@ a:active {
     margin-right: 30%;
 }
 
+.siteNav {
+    display: block;
+    width: 65%;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin-left: 11%;
+}
+
+.siteNavCol {
+    width: 33.33333%;
+    float: left;
+}
+
+.siteNavColTitle {
+    font-size: 14px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 5px;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.siteNavColList {
+    margin-bottom: 15px!important;
+    display: list-item;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .termsParent {
     max-width: 1032px;
     display: block;
