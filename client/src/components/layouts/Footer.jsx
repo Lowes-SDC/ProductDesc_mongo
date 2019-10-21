@@ -121,7 +121,7 @@ export default function Footer(props) {
             <div className="siteNav">
                 <div className="siteNavCol">
                     <div className="">
-                        <h3 className="siteNavColTitle" tabindex="0" id="offTitle">ABOUT HALLOWE'S</h3>
+                        <h3 className="siteNavColTitle" id="offTitle">ABOUT HALLOWE'S</h3>
                         <ul>
                             <li className="siteNavColList">
                                 <a className="" href="#">Company Overview
@@ -156,7 +156,7 @@ export default function Footer(props) {
                 </div>
                 <div className="siteNavCol">
                     <div className="">
-                        <h3 className="siteNavColTitle" tabindex="0">STORES &amp; SERVICES</h3>
+                        <h3 className="siteNavColTitle">STORES &amp; SERVICES</h3>
                         <ul>
                             <li className="siteNavColList">
                                 <a className="" href="#">Find a Store
@@ -191,7 +191,7 @@ export default function Footer(props) {
                 </div>
                 <div className="siteNavCol">
                     <div className="">
-                        <h3 className="siteNavColTitle" tabindex="0">CUSTOMER SERVICE</h3>
+                        <h3 className="siteNavColTitle">CUSTOMER SERVICE</h3>
                         <ul>
                             <li className="siteNavColList">
                                 <a className="" href="#">Rebates
@@ -230,8 +230,8 @@ export default function Footer(props) {
                     
                         <div className="contactEmail">
                             <div className="signup">
-                                <h3 className="siteContactColTitle" tabindex="0">BE THE FIRST TO KNOW</h3>
-                                <p tabindex="0" id="email">
+                                <h3 className="siteContactColTitle">BE THE FIRST TO KNOW</h3>
+                                <p id="email">
                                     <a href="#" title="Sign up for Emails">
                                         <Icon path={mdiEmailOutline} id="emailIcon"
                                                 title="Contact Us"
@@ -245,7 +245,7 @@ export default function Footer(props) {
                         </div>
                         <div className="contactConnect">
                             <div>
-                                <h3 className="siteContactColTitle" tabindex="0">CONNECT WITH US</h3>
+                                <h3 className="siteContactColTitle">CONNECT WITH US</h3>
                                 <div>
                                     <ul className="connectIconList">
                                         <li className="connectIconListItem">
@@ -305,7 +305,7 @@ export default function Footer(props) {
                         <div className="contactHelp">
                             <div>
                                 <div>
-                                    <h3 className="siteContactColTitle" tabindex="0">NEED HELP? 
+                                    <h3 className="siteContactColTitle">NEED HELP? 
                                         <a href="#" id="contactus"> Contact Us</a>
                                     </h3>
                                 </div>
