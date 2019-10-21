@@ -218,8 +218,33 @@ export default function Footer(props) {
                         </ul>
                     </div>
                 </div>
-                <div>
+                <div className="siteContact">
+                    <div className="siteContactCol">
                     
+                        <div className="contactEmail">
+                            <div className="signup">
+                                <h3 className="siteContactColTitle" tabindex="0">BE THE FIRST TO KNOW</h3>
+                                <p tabindex="0">
+                                    <a href="#" title="Sign up for Emails">
+                                        <i class="icon-email"></i> Sign up for Emails
+                                    </a> to get exclusive offers, tips and more.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div className="contactConnect">
+                            <div>
+                                <h3 className="siteContactColTitle" tabindex="0">CONNECT WITH US</h3>
+                            </div>
+                        </div>
+                        <div className="contactHelp">
+                            <div>
+                                <h3 className="siteContactColTitle" tabindex="0">NEED HELP?</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+
                 </div>
 
                 

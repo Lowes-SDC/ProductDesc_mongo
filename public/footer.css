@@ -85,14 +85,15 @@ a:active {
 
 .siteNav {
     display: block;
-    width: 65%;
+    width: 35%;
     float: left;
     margin-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
     font-family: Helvetica,Arial,sans-serif;
     font-size: 14px;
-    margin-left: 11%;
+    margin-left: 16%;
+    margin-right: 90%;
 }
 
 .siteNavCol {
@@ -120,6 +121,43 @@ a:active {
     list-style: none;
     font-size: 16px;
     font-weight: 400;
+}
+
+.siteContact {
+    width: 35%;
+    float: left;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.siteContactCol {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.siteContactColTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px!important;
+    margin: 0 0 5px;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contactEmail {
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signup {
+
 }
 
 .termsParent {
