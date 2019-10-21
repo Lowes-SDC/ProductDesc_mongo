@@ -237,7 +237,7 @@ export default function Footer(props) {
                                                 title="Contact Us"
                                                 size="14px"
                                                 color= "#0471AF"
-                                            /> Sign up for Emails
+                                        /> Sign up for Emails
                                     </a> to get exclusive offers, tips and more.
                                 </p>
                             </div>
@@ -246,11 +246,81 @@ export default function Footer(props) {
                         <div className="contactConnect">
                             <div>
                                 <h3 className="siteContactColTitle" tabindex="0">CONNECT WITH US</h3>
+                                <div>
+                                    <ul className="connectIconList">
+                                        <li className="connectIconListItem">
+                                            <a href="https://www.facebook.com" title="Facebook">
+                                                <span>
+                                                    <Icon path={mdiFacebookBox}
+                                                        size="26px"
+                                                        color= "#0471AF"
+                                                    />
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li className="connectIconListItem">
+                                            <a href="https://www.twitter.com" title="Twitter">
+                                                <span>
+                                                    <Icon path={mdiTwitter}
+                                                        size="26px"
+                                                        color= "#0471AF"
+                                                    />
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li className="connectIconListItem">
+                                            <a href="https://www.pinterest.com" title="Pinterest">
+                                                <span>
+                                                    <Icon path={mdiPinterest}
+                                                        size="26px"
+                                                        color= "#0471AF"
+                                                    />
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li className="connectIconListItem">
+                                            <a href="https://www.instagram.com" title="Instagram">
+                                                <span>
+                                                    <Icon path={mdiInstagram}
+                                                        size="26px"
+                                                        color= "#0471AF"
+                                                    />
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li className="connectIconListItem">
+                                            <a href="https://www.youtube.com" title="Youtube">
+                                                <span>
+                                                    <Icon path={mdiYoutube}
+                                                        size="26px"
+                                                        color= "#0471AF"
+                                                    />
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="contactHelp">
                             <div>
-                                <h3 className="siteContactColTitle" tabindex="0">NEED HELP?</h3>
+                                <div>
+                                    <h3 className="siteContactColTitle" tabindex="0">NEED HELP? 
+                                        <a href="#" id="contactus"> Contact Us</a>
+                                    </h3>
+                                </div>
+                                <p className="hoursInfo">
+                                    Mon - Sat: 8 a.m. - 10 p.m. (ET)
+                                </p>
+                                <p className="hoursInfo">
+                                    Sun: 8 a.m. - 9 p.m. (ET)
+                                </p>
+                                <div>
+                                    <p className="hoursInfo">
+                                        Text: <a href="#" id="dividerCon">84109</a> Call: <a href="#">1-800-445-6937</a>
+                                    </p>
+                                </div>
+                                <p className="hoursInfo">(Messaging and data rates apply.)</p>
                             </div>
                         </div>
                     </div>
