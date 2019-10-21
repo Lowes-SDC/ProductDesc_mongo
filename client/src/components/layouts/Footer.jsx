@@ -7,6 +7,12 @@ import { mdiCardBulletedOutline } from '@mdi/js';
 import { mdiGiftOutline } from '@mdi/js';
 import { mdiWrench } from '@mdi/js';
 import { mdiCellphoneAndroid } from '@mdi/js';
+import { mdiEmailOutline } from '@mdi/js';
+import { mdiFacebookBox } from '@mdi/js';
+import { mdiTwitter } from '@mdi/js';
+import { mdiPinterest } from '@mdi/js';
+import { mdiInstagram } from '@mdi/js';
+import { mdiYoutube } from '@mdi/js';
 
 export default function Footer(props) {
     return (
@@ -115,7 +121,7 @@ export default function Footer(props) {
             <div className="siteNav">
                 <div className="siteNavCol">
                     <div className="">
-                        <h3 className="siteNavColTitle" tabindex="0">ABOUT LOWE'S</h3>
+                        <h3 className="siteNavColTitle" tabindex="0" id="offTitle">ABOUT HALLOWE'S</h3>
                         <ul>
                             <li className="siteNavColList">
                                 <a className="" href="#">Company Overview
@@ -138,7 +144,7 @@ export default function Footer(props) {
                                 </a>
                             </li>
                             <li className="siteNavColList">
-                                <a className="" href="#">Lowe's Suppliers
+                                <a className="" href="#">Hallowe's Suppliers
                                 </a>
                             </li>
                             <li className="siteNavColList">
@@ -169,11 +175,11 @@ export default function Footer(props) {
                                 </a>
                             </li>
                             <li className="siteNavColList">
-                                <a className="" href="#">Lowe's For Pros
+                                <a className="" href="#">Hallowe's For Pros
                                 </a>
                             </li>
                             <li className="siteNavColList">
-                                <a className="" href="#">Lowe's Canada
+                                <a className="" href="#">Hallowe's Canada
                                 </a>
                             </li>
                             <li className="siteNavColList">
@@ -218,15 +224,20 @@ export default function Footer(props) {
                         </ul>
                     </div>
                 </div>
-                <div className="siteContact">
+            </div>
+            <div className="siteContact">
                     <div className="siteContactCol">
                     
                         <div className="contactEmail">
                             <div className="signup">
                                 <h3 className="siteContactColTitle" tabindex="0">BE THE FIRST TO KNOW</h3>
-                                <p tabindex="0">
+                                <p tabindex="0" id="email">
                                     <a href="#" title="Sign up for Emails">
-                                        <i class="icon-email"></i> Sign up for Emails
+                                        <Icon path={mdiEmailOutline} id="emailIcon"
+                                                title="Contact Us"
+                                                size="14px"
+                                                color= "#0471AF"
+                                            /> Sign up for Emails
                                     </a> to get exclusive offers, tips and more.
                                 </p>
                             </div>
@@ -243,12 +254,7 @@ export default function Footer(props) {
                             </div>
                         </div>
                     </div>
-                    
-
                 </div>
-
-                
-            </div>
             <div>
                 <div className="termsParent">
                     <div className="terms">
