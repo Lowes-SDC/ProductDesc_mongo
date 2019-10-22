@@ -1,7 +1,7 @@
 var path = require('path');
 var SRC_DIR = path.join(__dirname, '/client/src');
 var DIST_DIR = path.join(__dirname, '/public');
-var MiniCssExtractPlugin = require(mini-css-extract-plugin);
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: `${SRC_DIR}/ItemDesc.jsx`,
@@ -10,7 +10,7 @@ module.exports = {
     path: DIST_DIR
   },
   module : {
-    loaders : [
+    rules : [
       {
         test : /\.(jsx|js)?/,
         include : SRC_DIR,
