@@ -51,7 +51,7 @@ export default class App extends React.Component {
     getTask() {
         axios({
             method: 'get',
-            url: '/todo',
+            url: 'http://hallowes-item-description.us-east-1.elasticbeanstalk.com/desc',
         })
         .then(results => {
             this.setState({
@@ -138,27 +138,27 @@ export default class App extends React.Component {
                   <hr></hr>
 
                   <div className="number-input cartForm">
-                    <button onClick={this.handleDecrement} ></button>
+                    <button className="butt" onClick={this.handleDecrement} ></button>
                     <input className="quantity" min="1" name="quantity" defaultValue="1" type="number"></input>
                     <button onClick={this.handleIncrement} className="plus"></button>
                   </div>
 
-                  <button className="addToCart">
+                  <button className="addToCart butt">
                     <span id="addTxt">ADD TO CART</span>
                   </button>
 
                   <div className="btngrp">
-                  <button className="saveButton" onClick={this.changeHeart}>
+                  <button className="saveButton butt" onClick={this.changeHeart}>
                       <Icon path={this.state.iconHeart}
-                        title="Favorite"
+                        title="Save"
                         size="14px"
                         color={this.state.iconColor}
                       />
                       <span id="saveTxt">{this.state.iconTxt}</span>
                   </button>
-                  <button className="saveButton">
+                  <button className="saveButton butt">
                       <Icon path={mdiExportVariant}
-                        title="Favorite"
+                        title="Share"
                         size="14px"
                         color="#0471AF"
                       />

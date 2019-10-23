@@ -3,12 +3,14 @@ const app = express();
 const port = 3332;
 const path = require('path');
 const db = require('../db/db');
+const cors = require("cors");
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-app.get('/todo', (req, res) => {
+app.get('/desc', (req, res) => {
     db.getAll((err, result) => {
         if (err) {
             console.log(err);

@@ -23,7 +23,6 @@ html, body {
 .column {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
   flex: 1;
 }
   
@@ -99,7 +98,7 @@ hr {
   margin-left: 4%;
 }
 
-button {
+.butt {
   padding: 0 20px;
   height: 54px;
   min-height: 54px;
@@ -108,7 +107,6 @@ button {
   background-color: white;
   border: 1px solid #CCC;
   color: #0471AF;
-  padding: 15px 32px;
   font-family: Helvetica,Arial,sans-serif;
   text-align: center;
   vertical-align: middle;
@@ -116,6 +114,8 @@ button {
   margin: 0 auto;
   cursor: pointer;
 }
+
+
 
 .saveButton:hover {
   background-color: #e7e7e7;
@@ -217,7 +217,7 @@ input[type=number]::-webkit-outer-spin-button {
   max-height: 54px;
   vertical-align: top;
   margin-right: 4%;
-  margin-left: 1.8em;
+  margin-left: 4em;
   border: .8px solid #3da100;
 }
 

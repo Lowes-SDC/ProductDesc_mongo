@@ -11,24 +11,26 @@
     margin-left: -40%;
 }
 
-a {
-    text-decoration: none;
-    font-family: Helvetica,Arial,sans-serif;
-}
-
 .placeholder {
     margin-top: 100px;
 }
 
-a:visited {
+
+
+.linkTo {
+    text-decoration: none;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+.linkTo:visited {
     color: #0471AF;
 }
 
-a:hover {
+.linkTo:hover {
     color: #0471AF;
 }
 
-a:active {
+.linkTo:active {
     color: #0471AF;
 }
 

@@ -1,12 +1,12 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "atgeorge11/state-share-practice",
+      "Name": "mmorales7x7/item-description",
       "Update": "true"
     },
     "Ports": [
       {
-        "ContainerPort": "8080"
+        "ContainerPort": "3332"
       }
     ],
     "Logging": "/var/log/nginx"
