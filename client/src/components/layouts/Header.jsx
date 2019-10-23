@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: 300, //700 for no div
+        width: 300, //300 for div
       },
     },
     inputInputFocus: {
@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: 700, //700 for no div
+        width: 642, //700 for no div
       },
     },
     sectionDesktop: {

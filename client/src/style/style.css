@@ -43,9 +43,9 @@ html, body {
 }
 
 #description {
-  width: 45%;
+  width: 100%;
   max-width: 1200px;
-  margin-left: 55%;
+  margin-left: 60%;
 }
 
 .bullets {

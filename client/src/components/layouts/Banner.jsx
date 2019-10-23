@@ -9,6 +9,7 @@ import { mdiBookOpenVariant } from '@mdi/js';
 export default function Banner(props) {
     return (
             <div className="banner">
+                <div className="bannerGroupText">
                 <div className="indi" id='leftset'>
                     <p className="indi" id="starterTag">S.E. Austin Hallowe's</p>
                     <p className="fontban indi">Open till 10PM! &#x1F498;</p>
@@ -40,11 +41,7 @@ export default function Banner(props) {
 
                         <p className="fontban indi" id="next2Icon"> Weekly Ad</p>
                     </div>
-                    
-
-                    
-
-                    
+                </div>
                 </div>
              </div>
     )

@@ -7,15 +7,11 @@
     text-align: center;
     margin-top: 3%;
     padding: 0;
-    width: 201%;
-    margin-left: -40%;
 }
 
-.placeholder {
-    margin-top: 100px;
+.footerGroup {
+    margin-left: 5%;
 }
-
-
 
 .linkTo {
     text-decoration: none;
@@ -38,9 +34,8 @@
     padding-top: 25px;
     display: flex;
     margin-left: 16.1%;
-    margin-right: 29%;
+    margin-right: 24%;
 }
-
 .colgilList {
     margin-bottom: 25px;
     box-sizing: border-box;
@@ -82,7 +77,7 @@
     margin-bottom: 50px;
     border: 0;
     margin-left: 19%;
-    margin-right: 30%;
+    margin-right: 24%;
 }
 
 .siteNav {
@@ -205,7 +200,7 @@
 .termsParent {
     width: 100%;
     max-width: 1032px;
-    margin-left: 18.5%;
+    margin-left: 15.5%;
     margin-right: 30.5%;
     padding: 0;
 }
@@ -240,7 +235,8 @@
     font-size: 14px;
     line-height: 1.4em;
     margin: 0 0 5px 0;
-    margin-left: 20%;
-    margin-right: 33.8%;
+    margin-left: 22%;
+    margin-right: 30.8%;
     padding-bottom: .95%;
+    max-width: 1031.6px;;
 }

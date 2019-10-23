@@ -17,6 +17,7 @@ import { mdiYoutube } from '@mdi/js';
 export default function Footer(props) {
     return (
         <div>
+            <div className="footerGroup">
             <div className="colgil">
                 <ul className="colgilList">
                     <li className="colgilItem">
@@ -355,6 +356,7 @@ export default function Footer(props) {
                 <p className="copyright"> 
                     ©  2019 Hallowe's. All rights reserved maybe. Hallowe's and the Mario Design are not registered trademarks of LF, LLC.
                 </p>
+            </div>
             </div>
         </div>
     )
