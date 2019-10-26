@@ -5,7 +5,6 @@ import "./style/style.css";
 import "./style/footer.css";
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import Header from "./components/layouts/Header.jsx";
 import Banner from "./components/layouts/Banner.jsx";
 import Shipbanner from "./components/layouts/Shipbanner.jsx";
 import Footer from "./components/layouts/Footer.jsx";
@@ -40,12 +39,14 @@ export default class App extends React.Component {
         }],
         default: '',
         itemDescs: [],
+        pointer: 100,
       };
       this.getTask = this.getTask.bind(this);
       this.showDiscount = this.getTask.bind(this);
       this.changeHeart = this.changeHeart.bind(this);
       this.handleDecrement = this.handleDecrement.bind(this);
       this.handleIncrement = this.handleIncrement.bind(this);
+      this.handleSubmitToBadge = this.handleSubmitToBadge.bind(this);
     }
 
     getTask() {
@@ -57,14 +58,16 @@ export default class App extends React.Component {
             this.setState({
                 stock: results.data,
                 //default: results.data[100],
-                itemDescs: results.data[100].Descriptions.split(', '),
-                price: results.data[100].Prices.toFixed(2),
-                fakePrice: results.data[100].Mockprice.toFixed(2),
-                discount: results.data[100].Discount
+                itemDescs: results.data[this.state.pointer].Descriptions.split(', '),
+                price: results.data[this.state.pointer].Prices.toFixed(2),
+                fakePrice: results.data[this.state.pointer].Mockprice.toFixed(2),
+                discount: results.data[this.state.pointer].Discount
             });
         });
         
     }
+
+    
 
     changeHeart() {
       if (this.state.iconHeart === mdiHeartOutline) {
@@ -94,17 +97,25 @@ export default class App extends React.Component {
       }
     }
 
+    handleSubmitToBadge() {
+      let numItems = document.getElementsByClassName("quantity").quantity.value;
+      const event = new CustomEvent('addToCart', { detail: numItems });
+      window.dispatchEvent(event);
+    }
+
     componentWillMount(){
       this.getTask();
-    }
-  
-    // componentDidMount() {
-    
-    
-    // }
+    }  
 
-    
-  
+    componentDidMount() {
+      window.addEventListener('changeItem', (event) => {
+        if (event.detail) {
+          this.setState({
+            pointer: event.detail,
+          });
+        }
+      });
+    }
 
     render() {
       return (
@@ -143,7 +154,7 @@ export default class App extends React.Component {
                     <button onClick={this.handleIncrement} className="plus"></button>
                   </div>
 
-                  <button className="addToCart butt">
+                  <button className="addToCart butt" onClick={this.handleSubmitToBadge}>
                     <span id="addTxt">ADD TO CART</span>
                   </button>
 
