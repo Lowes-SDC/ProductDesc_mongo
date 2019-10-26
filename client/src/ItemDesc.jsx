@@ -111,7 +111,10 @@ export default class App extends React.Component {
       window.addEventListener('changeItem', (event) => {
         if (event.detail) {
           this.setState({
-            pointer: event.detail,
+            itemDescs: this.state.stock[event.detail].Descriptions.split(', '),
+            price: this.state.stock[event.detail].Prices.toFixed(2),
+            fakePrice: this.state.stock[event.detail].Mockprice.toFixed(2),
+            discount: this.state.stock[event.detail].Discount
           });
         }
       });
