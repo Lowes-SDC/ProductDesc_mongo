@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3332;
 const path = require('path');
-const db = require('../db/db');
+const { products } = require('../db/db_mongo.js');
 const cors = require("cors");
 
 app.use(express.static(path.join(__dirname, '../public')));
@@ -11,19 +11,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get('/desc', (req, res) => {
-    db.getAll((err, result) => {
+    let productID = req.query.id;
+    products.getOne(productID, (err, result) => {
         if (err) {
             console.log(err);
             res.send(err)
         } else {
-            //console.log(result);
             res.send(result);
         }
     });
 });
 
 app.post('/todo', (req, res) => {
-    console.log(req.body);
     db.insertItem(req.body.task, (err, result) => {
         if (err) {
             console.log(err);
