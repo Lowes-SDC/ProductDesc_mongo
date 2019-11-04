@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -d --watch",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "mongo-seed": "mongoimport --db=products --type=csv --headerline --file=./products.csv --numInsertionWorkers 8"
   },
   "author": "Mario Morales",
   "license": "ISC",
@@ -30,6 +31,7 @@
     "cors": "^2.8.5",
     "csv-stringify": "^5.3.3",
     "express": "^4.15.0",
+    "faker": "^4.1.0",
     "jquery": "^3.1.1",
     "material-ui-icons": "^1.0.0-beta.36",
     "mongoose": "^4.13.19",

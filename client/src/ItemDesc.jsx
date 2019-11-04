@@ -23,7 +23,6 @@ import { mdiTruckFast } from '@mdi/js';
 import { mdiCheckboxMarkedCircle } from '@mdi/js';
 import { mdiAlphaXCircle } from '@mdi/js';
 
-
 //window.changeWindow = new Event("changeWindow");
 export default class App extends React.Component {
     constructor(props) {
@@ -32,6 +31,7 @@ export default class App extends React.Component {
         iconColor: '#0471AF',
         iconHeart: mdiHeartOutline,
         iconTxt: 'SAVE',
+        productID: 9200000,
         stock: [{
             ID: '',
             Prices: '',
@@ -41,6 +41,7 @@ export default class App extends React.Component {
         itemDescs: [],
         pointer: 100,
       };
+
       this.getTask = this.getTask.bind(this);
       this.showDiscount = this.getTask.bind(this);
       this.changeHeart = this.changeHeart.bind(this);
@@ -50,24 +51,21 @@ export default class App extends React.Component {
     }
 
     getTask() {
-        axios({
-            method: 'get',
-            url: 'http://hallowes-item-description.us-east-1.elasticbeanstalk.com/desc',
+        axios.get('/desc', {
+          params: {
+            id: this.state.productID
+          }
         })
-        .then(results => {
-            this.setState({
-                stock: results.data,
-                //default: results.data[100],
-                itemDescs: results.data[this.state.pointer].Descriptions.split(', '),
-                price: results.data[this.state.pointer].Prices.toFixed(2),
-                fakePrice: results.data[this.state.pointer].Mockprice.toFixed(2),
-                discount: results.data[this.state.pointer].Discount
-            });
-        });
-        
-    }
-
-    
+        .then((results) => {
+          console.log("These are the results: ", results);                
+          this.setState({ 
+            itemDescs: results.data[this.state.pointer].Descriptions.split(', '),
+            price: results.data[this.state.pointer].Prices.toFixed(2),
+            fakePrice: results.data[this.state.pointer].Mockprice.toFixed(2),
+            discount: results.data[this.state.pointer].Discount
+          });
+        });   
+    }   
 
     changeHeart() {
       if (this.state.iconHeart === mdiHeartOutline) {
@@ -233,6 +231,5 @@ export default class App extends React.Component {
   }
 
   ReactDOM.render(<App />, document.getElementById("description"));
-
 
   // <Typography></Typography>
